@@ -10,7 +10,7 @@ class Register implements ControllerInterface
 {
     public function execute(array $semanticParameters)
     {
-        Repository::findUser($_POST['login']);
+        Repository::createUser($_POST);
 
         Render::redirectTo('/');
     }
